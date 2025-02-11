@@ -22,13 +22,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class DocxMerge {
-    private static final String outPath = "D:\\会计张敬富.docx";
+    private static final String outPath = "E:\\新建文件夹\\陈\\讲义\\第一章\\4筹资管理(上).docx";
     public static void main(String[] args) {
-        List<File> files = FileUtil.loopFiles(new File("E:\\会计\\讲义"),1,null);
+        List<File> files = FileUtil.loopFiles(new File("E:\\新建文件夹\\陈\\讲义\\第四章"),1,null);
         List<File> list = files.stream().filter(item -> item.getName().contains(".docx")).sorted().collect(Collectors.toList());
         list.sort((o1,o2)->{
-            String name = o1.getName().substring(0,o1.getName().indexOf("_"));
-            String _name = o2.getName().substring(0,o2.getName().indexOf("_"));
+            String name = o1.getName().substring(2,3);
+            String _name = o2.getName().substring(2,3);
             Integer a = Integer.parseInt(name);
             Integer b = Integer.parseInt(_name);
             return a.compareTo(b);
