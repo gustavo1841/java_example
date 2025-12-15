@@ -49,7 +49,7 @@ public class PdfMergeTools {
 //        sort(collect);
 //        File f = mulFile2One(collect, "D:\\考试\\CPA笔记精选\\会计\\01-零基础预习班-张敬富（23讲全）\\讲义\\预习.pdf");
 
-        File file = new File("E:\\新建文件夹\\156程序员的个人财富课");
+        File file = new File("E:\\新建文件夹");
         File[] files = file.listFiles();
         List<File> collect = Arrays.stream(files).collect(Collectors.toList());
         List<File> pdfs = collect.stream().filter(item -> {
@@ -57,8 +57,9 @@ public class PdfMergeTools {
             return "pdf".equals(suffix);
         }).collect(Collectors.toList());
         CommonUtils.sort(pdfs);
-        File f = mulFile2One(pdfs, "E:\\新建文件夹\\pdf\\程序员的个人财富课.pdf");
+        File f = mulFile2One(pdfs, "E:\\新建文件夹\\pdf\\02-并发编程.pdf");
         System.out.println(f.length());
+
     }
 
 }

@@ -10,7 +10,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 
 public class PdfSplitAtPage {
     public static void main(String[] args) throws IOException {
-        File file = new File("E:\\新建文件夹\\计算机网络.pdf");
+        File file = new File("D:\\计算机\\JKSJ 高级Java工程师体系课 2.0\\07 并发编程（下）\\资料\\07-并发编程.pdf");
 
         // load pdf file
         PDDocument document = Loader.loadPDF(file);
@@ -18,7 +18,7 @@ public class PdfSplitAtPage {
         // instantiating Splitter
         Splitter splitter = new Splitter();
 
-        splitter.setSplitAtPage(134);
+        splitter.setStartPage(14);
 
         // split the pages of a PDF document
         List<PDDocument> Pages = splitter.split(document);
