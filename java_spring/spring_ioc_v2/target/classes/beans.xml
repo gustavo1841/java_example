@@ -1,0 +1,7 @@
+<beans>
+    <bean id="userService" class="org.example.user.impl.UserServiceImpl" scope="singleton" init-method="init">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean id="userDao" class="org.example.user.dao.impl.UserDaoImpl" scope="singleton">
+    </bean>
+</beans>

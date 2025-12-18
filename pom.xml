@@ -45,6 +45,8 @@
     <module>docment_tools</module>
     <module>java_encryption</module>
       <module>java_log</module>
+    <module>java_spring/spring_ioc_v1</module>
+      <module>java_spring/spring_ioc_v2</module>
   </modules>
 
   <properties>
